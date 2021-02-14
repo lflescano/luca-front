@@ -17,10 +17,11 @@ const InfiniteScroll = ({ elements, hasMore, fetchMoreData }) => {
           hasMore={hasMore}
           loader={<h4>Cargando...</h4>}
           endMessage={<h4>No hay mas preguntas</h4>}
+          scrollableTarget="right-layout-content"
         >
           {elements.map((i, index) => (
             <div key={index}>
-              <ItemInfiniteScroll title={i.title} description={i.description} user={i.user} subject={i.subject} />
+              <ItemInfiniteScroll title={i.title} description={i.description} user={i.username} subject={i.subjectname} />
             </div>
           ))}
         </InfiniteScrollComponent>

@@ -25,8 +25,8 @@ const MainLayout = ({ children }) => {
         }
         
         <div className='right-layout-container'>
-            <BaseHeader username={'Juan Perez'}></BaseHeader>
-            <div className="right-layout-content">
+            <BaseHeader></BaseHeader>
+            <div className="right-layout-content" id="right-layout-content">
                 {children}
             </div>
         </div>

@@ -2,17 +2,17 @@ import React, {useState} from 'react';
 import { withTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 
-import { AuthService } from '../../services/AuthService';
-import useRequest from '../../hooks/useRequest';
-import { isMobile } from '../../helpers/Mobile';
+import { AuthService } from 'services/AuthService';
+import useRequest from 'hooks/useRequest';
+import { isMobile } from 'helpers/Mobile';
 
-import LoginHeader from '../../components/atoms/LoginHeader';
-import InputText from '../../components/atoms/InputText';
-import InputCheckbox from '../../components/atoms/InputCheckbox';
-import ActionButton from '../../components/atoms/ActionButton';
-import GradientButton from '../../components/atoms/GradientButton';
-import Icon from '../../components/atoms/Icon';
-import logo from '../../assets/images/logo.png';
+import LoginHeader from 'components/atoms/LoginHeader';
+import InputText from 'components/atoms/InputText';
+import InputCheckbox from 'components/atoms/InputCheckbox';
+import ActionButton from 'components/atoms/ActionButton';
+import GradientButton from 'components/atoms/GradientButton';
+import Icon from 'components/atoms/Icon';
+
 
 import './styles.scss';
 
@@ -62,7 +62,6 @@ const SignInView = (props) => {
     return (
         <div className="signin-container">
             {!isMobile && <LoginHeader></LoginHeader>}
-            {isMobile && <img src={logo} alt="Luca Logo" />}
 
             <div className="signin-content">
                 <form  className="signin-form" onSubmit={handleSubmit}>

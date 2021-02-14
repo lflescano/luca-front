@@ -9,14 +9,14 @@ export const useRequest = (initialFilters, productFilters, filterTypeMap, isMobi
   
   function loading() {
     document.body.style.cursor = 'wait';
-    document.getElementById('spinner-container').style.display ="flex";
+    //document.getElementById('spinner-container').style.display ="flex";
     console.log("Loading");
     setLoadingSpinner(true);
   }
 
   function stopLoading() {
     document.body.style.cursor = 'default';
-    document.getElementById('spinner-container').style.display = "none";
+    //document.getElementById('spinner-container').style.display = "none";
     console.log("Stop Loading");
     setLoadingSpinner(false);
   }

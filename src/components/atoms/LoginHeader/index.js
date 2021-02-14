@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from '../../../assets/images/logo.png';
 import './styles.scss';
 import { isMobile } from '../../../helpers/Mobile';
 import { Link } from 'react-router-dom';
@@ -20,20 +19,13 @@ return <div className="login-header-container">
    </div>
    {!isMobile &&
    <div className="login-header-title">
-       <h1 className="login-header-title-text">Oficina Virtual</h1>
+       <h1 className="login-header-title-text">Datos</h1>
         <div className="login-header-title-line"></div>
    </div>
     }
     {!isMobile && 
     <div className="login-header-contact-info">
-        <div className="login-header-contact-info-item"> 
-            <div className="login-header-contact-info-item-title"> ASISTENCIA TÉCNICA</div>
-            <div className="login-header-contact-info-item-number"> 0800 999 2272</div>
-        </div>
-        <div className="login-header-contact-info-item"> 
-            <div className="login-header-contact-info-item-title">GESTIÓN COMERCIAL</div>
-            <div className="login-header-contact-info-item-number"> 0810 999 2272</div>
-        </div>
+
     </div>
     }
 </div>

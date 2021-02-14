@@ -8,6 +8,7 @@
     padding: 24px 24px 8px 8px;
     display: flex;
     flex-direction: column;
+    margin-left: 224px;
 
     .item-infinite-scroll-header{
         display:flex;
@@ -43,7 +44,15 @@
             display: flex;
             justify-content: flex-end;
             p{
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
                 margin-left: 4px;
+                color: #9A9CB5;
             }
         }
     }
@@ -91,10 +100,61 @@
             svg{
                 margin-left:20px;
             }
+
+            p{
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-left: 4px;
+                color: #9A9CB5;
+            }
         }
     }
 }
 
 @media (max-height: $mobile-height) and (max-width: $mobile-width) {
+    .item-infinite-scroll-container{
+        margin-left: 0;
+        padding: 32px 0px 0px 0px;
 
+        .item-infinite-scroll-header{
+            margin-bottom: 16px;
+
+            .item-infinite-scroll-photo{
+                margin-right: 18px;
+                svg{
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+            .item-infinite-scroll-info{
+                width: 80%;
+            }
+        } 
+
+        .item-infinite-scroll-footer{
+
+            .item-infinite-scroll-likes{
+                width: 20%;
+                margin-left: 0;
+                margin-right: 16px;
+                svg{
+                    margin-right: 16px;
+                } 
+            }
+
+            .item-infinite-scroll-share{
+                width: auto;
+
+                svg{
+                    width: 18px;
+                    height: 18px;
+                } 
+            }
+        } 
+    }
 }

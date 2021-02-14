@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import TableBootstrap from 'react-bootstrap/Table'
 
 import "./styles.scss";
+import { isMobile } from "helpers/Mobile";
 
 const ItemInfiniteScroll = ({ title = "Default", description = "Default", user = "default", subject="Default", comments = Math.floor(Math.random() * 100 ) }) => {
     const [index, setIndex] = useState();
@@ -35,12 +36,12 @@ const ItemInfiniteScroll = ({ title = "Default", description = "Default", user =
                 <h2>{title}</h2>
                 <p>{description}</p>   
             </div>
-            <div className="item-infinite-scroll-comments">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {!isMobile &&<div className="item-infinite-scroll-comments">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7117 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0034 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92176 4.44061 8.37485 5.27072 7.03255C6.10083 5.69025 7.28825 4.60557 8.7 3.9C9.87812 3.30493 11.1801 2.99656 12.5 3H13C15.0843 3.11499 17.053 3.99476 18.5291 5.47086C20.0052 6.94695 20.885 8.91565 21 11V11.5Z" stroke="#C4C6D3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <p>{comments}</p>
-            </div>
+            </div>}
         </div>
         <div className="item-infinite-scroll-footer">
             <div className="item-infinite-scroll-likes">
@@ -52,16 +53,20 @@ const ItemInfiniteScroll = ({ title = "Default", description = "Default", user =
                 </svg>
             </div>
             <div className="item-infinite-scroll-meta">
-                <p>Pregunta {user} en <strong>{subject}</strong></p>
+                <p>{!isMobile && <>Pregunta</>} {user} en <strong>{subject}</strong></p>
             </div>
             <div className="item-infinite-scroll-share">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {isMobile && <> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7117 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0034 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92176 4.44061 8.37485 5.27072 7.03255C6.10083 5.69025 7.28825 4.60557 8.7 3.9C9.87812 3.30493 11.1801 2.99656 12.5 3H13C15.0843 3.11499 17.053 3.99476 18.5291 5.47086C20.0052 6.94695 20.885 8.91565 21 11V11.5Z" stroke="#C4C6D3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <p>{comments}</p></>}
+                {!isMobile && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 8C19.6569 8 21 6.65685 21 5C21 3.34315 19.6569 2 18 2C16.3431 2 15 3.34315 15 5C15 6.65685 16.3431 8 18 8Z" stroke="#9A9CB5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M6 15C7.65685 15 9 13.6569 9 12C9 10.3431 7.65685 9 6 9C4.34315 9 3 10.3431 3 12C3 13.6569 4.34315 15 6 15Z" stroke="#9A9CB5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M18 22C19.6569 22 21 20.6569 21 19C21 17.3431 19.6569 16 18 16C16.3431 16 15 17.3431 15 19C15 20.6569 16.3431 22 18 22Z" stroke="#9A9CB5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M8.59 13.51L15.42 17.49" stroke="#9A9CB5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M15.41 6.50999L8.59 10.49" stroke="#9A9CB5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                </svg>}
                 {Math.floor(Math.random() * 4) % 2 === 0 ?
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#9A9CB5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

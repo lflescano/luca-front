@@ -1,37 +1,50 @@
 @import '../../../assets/styles/fonts';
 @import '../../../assets/styles/variables';
 
-.desktop-main-layout-container{
-    height: 100%;
-    display: flex;
-    background-color: #FAFAFC;
 
-    overflow: hidden;
+body{
+    overflow: auto;
 
-
-    .mobile-nav{
-        display: none;
-    }
-    .right-layout-container{
-        flex: 1 1;
-        height: 100%;
-        flex-direction: column;
-        display: flex;
-        background: #F1F2F8;
-
-        .right-layout-content {
-            padding: 45px 45px 0px 45px;
-            overflow: auto;
-            height: 100%;
-        }
-    }
-}
-
-@media (max-height: $mobile-height) and (max-width: $mobile-width) {
     .desktop-main-layout-container{
         height: 100%;
         display: flex;
         background-color: #FAFAFC;
+
+        overflow: hidden;
+
+
+        .mobile-nav{
+            display: none;
+        }
+        .right-layout-container{
+            flex: 1 1;
+            height: 100%;
+            flex-direction: column;
+            display: flex;
+            background: #F1F2F8;
+
+            .right-layout-content {
+                padding: 45px 45px 0px 45px;
+                overflow: auto;
+                height: 100%;
+            }
+        }
+    }
+
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+
+    body .desktop-main-layout-container .right-layout-container{
+        background: none;
+        .right-layout-content {
+            padding: 16px;
+        }
+    }
+    .desktop-main-layout-container{
+        height: 100%;
+        display: flex;
+        background: none;
         flex-direction: column;
         /* height: 100vh; */
         position: absolute;

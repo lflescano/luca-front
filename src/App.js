@@ -7,7 +7,8 @@ import './App.css';
 import {Context, ContextPersist} from "./store/context"
 import { AuthService } from './services/AuthService';
 
-import SignInView from './views/Auth/SignInView';
+import SignInView from './views/Auth/Login/SignInView';
+import CommunityListView from './views/Community/CommunityList/CommunityListView';
 
 function App() {
     const history = useHistory();
@@ -44,18 +45,16 @@ function App() {
         <main>
             <Switch>
                 <React.Fragment>
-                    <Router>
-                        { (load && !user) &&
+                        {/* { (load && !user) &&
                         <div>
                             <Route path='/login' component={SignInView} />
                         </div>
                         }
-                        { (load && user) &&
+                        { (load && user) && */}
                         <div>
-                            {/* <Route path='/comunidad' component={HomeView} /> */}
+                            <Route path='/comunidad' component={CommunityListView} />
                         </div>
-                        }
-                    </Router>
+                        {/* } */}
                 </React.Fragment>
             </Switch>
         </main>
