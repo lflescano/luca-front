@@ -41,6 +41,8 @@ export const useRequest = (initialFilters, productFilters, filterTypeMap, isMobi
   function showSuccess(message) {
     afterSubmit();
     setSuccess(true);
+    console.log("daaa");
+    console.log(message);
     setMessage(message);
   }
 

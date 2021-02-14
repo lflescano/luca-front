@@ -2,7 +2,7 @@
 @import '../../../assets/styles/fonts';
 @import '../../../assets/styles/variables';
 
-.community-list-header{
+.community-form-header{
     display:flex;
     margin-bottom: 48px;
     max-width: 704px;
@@ -24,15 +24,23 @@
     }
 }
 
+.community-form-content{
+    .community-form-button-submit{
+        float: right;
+    }
+}
+
 @media (max-height: $mobile-height) and (max-width: $mobile-width) {
-    .community-list-header{
+    .community-form-header{
         margin-left: 0;
-        margin-bottom: 32px;
+        margin-top: 16px;
+        h1{
+            width: 95%;
+        }
     }
 
-    a.create-button {
-        position: absolute;
-        bottom: 20%;
-        right: 5%;
+    .community-form-content .community-form-button-submit {
+        float: none;
+        width: 100%;
     }
 }

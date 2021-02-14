@@ -88,24 +88,57 @@
 
 @media (max-height: $mobile-height) and (max-width: $mobile-width) {
   .sidebar-container {
+      .login-header-container {
+          display: none;
+      }
+      width: auto;
+      max-width: 414px;
+      height: 106px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      background: #022040;
-      width: 80%;
-      height: 100%;
-      position: absolute;
-      padding-top: 95px;
-      padding-left: 10px;
+      background: #fff;
+      border-top: 1px solid rgba(38, 38, 38, 0.25);
+      position: fixed;
+      bottom: 0;
+      left: 0; 
+      right: 0;
       z-index: 1;
-  }
-  .sidebar-container.open {
-    transform: translateX(0px);
-    transition-duration: 1s;
-  }
+      .menu-items {
+        margin-left: 0px;
+        margin-top: 0px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        display: flex;
+        width: 100%;
+        .item{
+          margin: 0;
+          margin-left: 10px;
+          border-radius: initial;
+          padding-top: 24px;
+          .item-title{
+            display: none;
+          }
+        }
 
-  .sidebar-container.close {
-    transform: translateX(-100%);
-    transition-duration: 1s;
+        .item.active-item {
+            background: none;
+            border-top: 4px solid #3843D0;
+          }
+      }
+      .menu-line{
+            position: absolute;
+            left: 30%;
+            right: 0px;
+            bottom: 8px;
+            height: 5px;
+            width: 173px;
+            background: #000000;
+            border-radius: 10px;
+            display: flex;
+      }
   }
 }

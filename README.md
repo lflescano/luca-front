@@ -1,4 +1,5 @@
 # Luca Front
+Se trabajo el front-end bajo los preceptos de ATOMIC DESING. Se intentò atomizar de la mejor maneja el front y para la reutilizaciòn de componentes. Se definieron dos templates. La intenciòn era tambien agregar un mìnimo login pero por cuestions de tiempos no serà posible.
 
 ## Dependencies
  - Node
@@ -8,7 +9,9 @@
  - Clone repo
  - cd to project folder
  - Install Node y NPM usando NVM. Version 12 en adelante
+ - --- npm install
  - Create .env. Copy .env.example
+ - Configure the API route
 
 ## SO Windows
  - Edit package.json section "scripts"."start" with:
@@ -17,13 +20,17 @@
  - DONT COMMIT CHANGES
 
 ## Dev Run
- - npm start
+ - npm run start
  - Access https://localhost:3000
+
+## Storybook Run
+ - npm run storybook
+ - Access https://localhost:9009
 
 ## Prod Build
  - npm run build
 
-## Docker
+## Docker 
 
 ### Build
 sudo docker build -t luca-front .

@@ -5,7 +5,6 @@ import './styles.scss';
 import TabsBootstrap from 'react-bootstrap/Tabs';
 import TabBoostrap from 'react-bootstrap/Tabs';
 
-import Table from "components/molecules/Table";
 import InfiniteScroll from 'components/molecules/InfiniteScroll';
 
 const Tabs = ({ elements, hasMore, fetchMoreData }) => {

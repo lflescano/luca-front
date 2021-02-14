@@ -1,11 +1,11 @@
 import React from 'react'
 import './styles.scss';
-import { isMobile } from '../../../helpers/Mobile';
+import { isMobile } from 'helpers/Mobile';
 
 import Dropdown from '../Dropdown';
 
-const BaseHeader =  ({username}) => {
-
+const BaseHeader =  () => {
+console.log(isMobile);
 return <div className="base-header-container">
    {isMobile &&
    <div className="base-header-title">

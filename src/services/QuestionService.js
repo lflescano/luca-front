@@ -34,7 +34,7 @@ export const QuestionService = {
         return new Promise((resolve, reject) => {
             return Api.fetchNoToken(`${Environment.api}api/questions`, 'POST', data
             ).then(data => {
-                resolve(new Question(data));
+                resolve(data);
             }).catch((error) => {
                 reject(error);
             }

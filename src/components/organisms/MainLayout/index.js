@@ -11,21 +11,17 @@ import SpinnerLuca from 'components/atoms/SpinnerLuca';
 
 import "./styles.scss";
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ showHeader = true, children }) => {
     const {
         loadingSpinner
     } = useRequest();
-
-    const [open, setOpen] = useState(false);
     
     return <div className="desktop-main-layout-container">
-        {!isMobile &&
-            <Sidebar open={true} setOpen={setOpen}>
-            </Sidebar>
-        }
+        <Sidebar >
+        </Sidebar>
         
         <div className='right-layout-container'>
-            <BaseHeader></BaseHeader>
+            {showHeader && <BaseHeader></BaseHeader>}
             <div className="right-layout-content" id="right-layout-content">
                 {children}
             </div>

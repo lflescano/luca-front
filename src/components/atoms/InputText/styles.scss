@@ -11,7 +11,7 @@
     }
     label{
         height: 16px;
-        width: 149px;
+        width: auto;
         left: 288px;
         top: 122px;
         border-radius: nullpx;
@@ -39,7 +39,7 @@
 
         &::-webkit-input-placeholder{
             height: 18px;
-            width: 162px;
+            width: auto;
             left: 16px;
             top: 15px;
             border-radius: nullpx;
@@ -54,7 +54,7 @@
 
     textarea.form-control{
         height: 192px;
-        width: 576px;
+        max-width: 576px;
         left: 288px;
         top: 250px;
         border-radius: 12px;
@@ -67,7 +67,7 @@
 
         &::-webkit-input-placeholder{
             height: 18px;
-            width: 162px;
+            width: auto;
             left: 16px;
             top: 15px;
             border-radius: nullpx;
@@ -82,9 +82,18 @@
 }
 
 .input-error{
-    color: #e60f0f;
-    font-family: MyriadPro;
-    font-size: 12px;
+    height: 16px;
+    width: auto;
+    left: 288px;
+    top: 122px;
+    border-radius: nullpx;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0em;
     text-align: left;
-    margin-top: 10px;
+    color: #d13131;
+    margin-bottom: 15px;
 }

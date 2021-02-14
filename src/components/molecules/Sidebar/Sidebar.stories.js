@@ -3,9 +3,13 @@ import React from 'react';
 import SidebarComponent from '.';
 
 export default {
-    title: 'Atoms/Sidebar'
+    title: 'Molecules/Sidebar'
 }
 
-export const Sidebar = () => {
+export const Default = () => {
+    return <SidebarComponent />
+}
+
+export const Mobile = () => {
     return <SidebarComponent />
 }
