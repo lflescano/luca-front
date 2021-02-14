@@ -13,12 +13,12 @@ import Question from "models/Question";
 
 import './styles.scss';
 
-const CommunityListView = (props) => {
+const CommunityFormView = (props) => {
     const {
         beforeSubmit, afterSubmit,
         dealWithError
     } = useRequest();
-    
+
     const [questions, setQuestions] = useState();
     const [hasMore, setHasMore] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
@@ -73,4 +73,4 @@ const CommunityListView = (props) => {
     return <CommunityList elements={questions} hasMore={hasMore} fetchMoreData={fetchMoreData}></CommunityList>
 }
 
-export default withTranslation()(CommunityListView);
+export default withTranslation()(CommunityFormView);

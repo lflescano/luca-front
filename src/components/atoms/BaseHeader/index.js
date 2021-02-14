@@ -2,7 +2,6 @@ import React from 'react'
 import './styles.scss';
 import { isMobile } from '../../../helpers/Mobile';
 
-import Icon from "../Icon";
 import Dropdown from '../Dropdown';
 
 const BaseHeader =  ({username}) => {

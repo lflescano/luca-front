@@ -9,6 +9,7 @@ import { AuthService } from './services/AuthService';
 
 import SignInView from './views/Auth/Login/SignInView';
 import CommunityListView from './views/Community/CommunityList/CommunityListView';
+import CommunityFormView from './views/Community/CommunityForm/CommunityFormView';
 
 function App() {
     const history = useHistory();
@@ -52,7 +53,9 @@ function App() {
                         }
                         { (load && user) && */}
                         <div>
+                            <Route path='/' component={CommunityListView} />
                             <Route path='/comunidad' component={CommunityListView} />
+                            <Route path='/crear_pregunta' component={CommunityFormView} />
                         </div>
                         {/* } */}
                 </React.Fragment>
