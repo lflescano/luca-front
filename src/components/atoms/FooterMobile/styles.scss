@@ -1,0 +1,42 @@
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/variables';
+
+.footer-mobile-container{
+    display: flex;
+    background: $lightBlueFooter;
+    height: 70px;
+    padding: 0 43px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .footer-mobile-contact-info{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        .footer-mobile-contact-info-item{
+            flex: 1 1 40%;
+            text-align: center;
+            .footer-mobile-contact-info-item-title{
+                color: #ffffff;
+                font-family: MyriadPro;
+                font-size: 10px;
+            }
+            .footer-mobile-contact-info-item-number{
+                color: #ffffff;
+                font-family: MyriadPro;
+                font-size: 10px;
+            }
+        }
+        .footer-mobile-contact-info-item.footer-mobile-logo{
+            flex: 1 1 10%;
+            img{
+                width: 50px;;
+            }
+        }
+    }
+}
+
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+}

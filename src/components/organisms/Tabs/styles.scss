@@ -1,0 +1,27 @@
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/variables';
+
+.tabs-scroll{
+
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+        color: #3843D0;
+        border: none;
+        border-bottom: 2px solid #3843D0;
+    }
+
+    .nav-tabs .nav-link {
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #9A9CB5;
+        border: none;
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+
+}

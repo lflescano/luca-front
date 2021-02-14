@@ -1,0 +1,22 @@
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/variables';
+
+.action-button {
+    background-color: #1F3BA3;
+    color: #FFFFFF;
+    font-family: MyriadPro;
+    font-size: 14px;
+    letter-spacing: 0.56px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: none;
+    border-radius: 4px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    height: 29px;
+    width: auto;
+    min-width: 115px;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+}

@@ -1,0 +1,100 @@
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/variables';
+
+
+.item-infinite-scroll-container{
+    border-bottom: 1px solid #DBDBDB;
+    max-width: 704px;
+    padding: 24px 24px 8px 8px;
+    display: flex;
+    flex-direction: column;
+
+    .item-infinite-scroll-header{
+        display:flex;
+        .item-infinite-scroll-photo{
+            width: 20%;
+        }
+        .item-infinite-scroll-info{
+            width: 60%;
+            h2{
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #4F4F4F;
+            }
+            
+            p{
+                font-family: Inter;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #828282;
+            }
+        }
+        .item-infinite-scroll-comments{
+            width: 20%;
+            display: flex;
+            justify-content: flex-end;
+            p{
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .item-infinite-scroll-footer{
+        display:flex;
+
+        .item-infinite-scroll-likes{
+            display:flex;
+            width: 15%;
+            margin-left: 20%;
+            svg{
+                margin-right:20px;
+            }
+        }
+
+        .item-infinite-scroll-meta{
+            width: 60%;
+            p{
+                font-family: Inter;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #828282;
+                strong{
+                    font-family: Inter;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: #3843D0;
+                }
+            }
+        }
+
+        .item-infinite-scroll-share{
+            width: 15%;
+            display:flex; 
+            justify-content: flex-end;
+            svg{
+                margin-left:20px;
+            }
+        }
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+
+}

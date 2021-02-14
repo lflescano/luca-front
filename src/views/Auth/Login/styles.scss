@@ -1,0 +1,1395 @@
+@import '../../assets/styles/fonts';
+@import '../../assets/styles/variables';
+
+.success-messages {
+    color: #465057;
+    font-size: 12px;
+    font-family: MyriadPro;
+}
+ 
+.error-messages{
+    color: #e60f0f;
+    font-family: MyriadPro;
+    font-size: 12px;
+    text-align: center;
+}
+
+.signin-container{
+    height: 100%;
+    overflow: auto;
+    .signin-content{
+        display: flex;
+        justify-content: center;
+        .signin-form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin-top: 4vh;
+            // background-color: lightcoral;
+            .signin-title{
+                text-align: center;
+                color: #022040;
+                font-size: 28px;
+                font-family: MyriadPro;
+                font-weight: 700;
+                margin-bottom: 39px;
+            }
+            .signin-input-group{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                .signin-input-icon-container{
+                    width: 36px;
+                    align-self: baseline;
+                    margin-top: 5px;
+                }
+                .signin-input-container{
+                    flex: 1;
+                    position:relative;
+
+                    .register-eye.show {
+                        display: block;
+                        position: absolute;
+                        top: 9px;
+                        right: 0;
+                    }
+
+                    .register-eye.hide{
+                        display: none;
+                    }
+
+                    .register-eye-closed.show{
+                        display: flex;
+                    }
+
+                    .register-eye-closed.hide{
+                        display: none;
+                    }
+                }
+            }
+            .signin-showpass{
+                padding-left: 31px;
+                margin-top: -10px;
+            }
+            .signin-button{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 34px;
+                .gradient-button{
+                    
+                width: 81px;
+                }
+            }
+            .signin-olvide{
+                color: #5393F2;
+                font-size: 14px;
+                text-align: center;
+                font-family: MyriadPro;
+                margin-top: 13px;
+
+                a{
+                    cursor: pointer;
+                }
+            }
+            .signin-bottom-content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 4vh;
+                .signin-bottom-legend{
+                    color: #626060;
+                    font-family: MyriadPro;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    font-style: italic;
+
+                }
+                .signin-bottom-button{
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+    .signin-container{
+        
+    background: #022040;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+
+    img{
+        min-width: 0;
+    flex-basis: auto;
+    width: 133px;
+    margin-top: 74px;
+    }
+        .signin-content{
+            display: flex;
+            justify-content: center;
+            .signin-form{
+                display: flex;
+                flex-direction: column;
+                width: 190px;
+                margin-top: 10px;
+                // background-color: lightcoral;
+                .signin-title{
+                    text-align: center;
+                    color: #FFFFFF;
+                    font-size: 28px;
+                    font-family: MyriadPro;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                }
+                .signin-input-group{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    position: relative;
+                    .signin-input-icon-container{
+                        width: 36px;
+                        position: absolute;
+                        left: -36px;
+                    }
+                    .signin-input-container{
+                        flex: 1;
+
+                        .register-eye.show {
+                            display: block;
+                            position: absolute;
+                            top: 9px;
+                            right: 0;
+                        }
+
+                        .register-eye.hide{
+                            display: none;
+                        }
+
+                        .register-eye-closed.show{
+                            display: flex;
+                        }
+
+                        .register-eye-closed.hide{
+                            display: none;
+                        }
+                    }
+                }
+                .signin-showpass{
+                    color: #FFFFFF;
+                    padding: 0;
+                    .input-checkbox{
+                        color: #FFFFFF;
+                    }
+                }
+                .signin-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 24px;
+                    .gradient-button{
+                        
+                    width: 81px;
+                    }
+                }
+                .signin-olvide{
+                    color: #5393F2;
+                    font-size: 14px;
+                    text-align: center;
+                    font-family: MyriadPro;
+                    margin-top: 13px;
+                }
+                .signin-bottom-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 73px;
+                    .signin-bottom-legend{
+                        color: #FFFFFF;
+                        font-family: MyriadPro;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+                        font-style: italic;
+                    }
+                    .signin-bottom-button{
+                        input.action-button{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*REGISTRO*/
+
+.register-container{
+    height: 100%;
+    overflow: auto;
+    .register-content{
+        display: flex;
+        justify-content: center;
+        .register-form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin-top: 4vh;
+            // background-color: lightcoral;
+            .register-title{
+                text-align: center;
+                color: #022040;
+                font-size: 28px;
+                font-family: MyriadPro;
+                font-weight: 700;
+                margin-bottom: 39px;
+            }
+            .register-input-group{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                .register-input-icon-container{
+                    width: 36px;
+                    align-self: baseline;
+                    margin-top: 5px;
+                }
+                .register-input-container{
+                    flex: 1;
+                    position: relative;
+                    .register-eye.show {
+                        display: block;
+                        position: absolute;
+                        top: 9px;
+                        right: 0;
+                    }
+
+                    .register-eye.hide{
+                        display: none;
+                    }
+
+                    .register-eye-closed.show{
+                        display: flex;
+                    }
+
+                    .register-eye-closed.hide{
+                        display: none;
+                    }
+                }
+            }
+            .register-showpass{
+                padding-left: 32px;
+                margin-top: -10px;
+            }
+            .register-button{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 18px;
+                .gradient-button{
+                    
+                width: 115px;
+                }
+            }
+            .register-olvide{
+                color: #5393F2;
+                font-size: 14px;
+                text-align: center;
+                font-family: MyriadPro;
+                margin-top: 13px;
+            }
+            .register-terms {
+                margin-top: 25px;
+                .input-checkbox .form-check{
+                    justify-content: center;
+                    a {
+                        color: #0098D8;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .register-captcha{
+                text-align: center;
+                margin-top: 25px;
+            }
+            .register-bottom-content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+                .register-bottom-legend{
+                    color: #626060;
+                    font-family: MyriadPro;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+    .register-container{
+        
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+
+    .login-header-container .login-header-logo img{
+        min-width: 0;
+        flex-basis: auto;
+        width: 77px;
+        padding: 15px;
+    }
+        .register-content{
+            display: flex;
+            justify-content: center;
+            .register-form{
+                display: flex;
+                flex-direction: column;
+                width: 190px;
+                margin-top: 40px;
+                // background-color: lightcoral;
+                .register-title{
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: MyriadPro;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                }
+                .register-input-group{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    position: relative;
+                    .register-input-icon-container{
+                        width: 36px;
+                        position: absolute;
+                        left: -36px;
+
+                        .register-eye.show {
+                            display: block;
+                            position: absolute;
+                            top: 9px;
+                            right: 0;
+                        }
+
+                        .register-eye.hide{
+                            display: none;
+                        }
+
+                        .register-eye-closed.show{
+                            display: flex;
+                        }
+
+                        .register-eye-closed.hide{
+                            display: none;
+                        }
+                    }
+                    .register-input-container{
+                        flex: 1;
+                    }
+                }
+                .register-showpass{
+                    padding: 0;
+                }
+                .register-terms{
+                    padding: 0;
+                    width: 220px;
+                }
+                .register-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 24px;
+                    .gradient-button{
+                        
+                    width: 115px;
+                    }
+                }
+                .register-olvide{
+                    color: #5393F2;
+                    font-size: 14px;
+                    text-align: center;
+                    font-family: MyriadPro;
+                    margin-top: 13px;
+                }
+                .register-bottom-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 30px;
+                    .register-bottom-legend{
+                        color: #626060;
+                        font-family: MyriadPro;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+    
+                    }
+                    .register-bottom-button{
+                        width: auto;
+                    }
+                }
+            }
+        }
+        
+        .footer-mobile-container{
+            position:relative;
+            margin-top: 15px;
+        }
+    }
+}
+
+/*RECUPERO DE CLAVE*/
+.forgotten-password-container{
+    height: 100%;
+    overflow: auto;
+    .forgotten-password-content{
+        display: flex;
+        justify-content: center;
+        .forgotten-password-form{
+            display: flex;
+            flex-direction: column;
+            width: 360px;
+            margin-top: 4vh;
+            // background-color: lightcoral;
+            .forgotten-password-title{
+                text-align: center;
+                color: #022040;
+                font-size: 28px;
+                font-family: MyriadPro;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            .forgotten-password-subtitle{
+                    text-align: center;
+                    color: #022040;
+                    font-size: 16px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    color: $lightGrey;
+            }
+            .forgotten-password-input-group{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                .forgotten-password-input-icon-container{
+                    width: 36px;
+                    align-self: baseline;
+                    margin-top: 5px;
+                }
+                .forgotten-password-input-container{
+                    flex: 1;
+                }
+            }
+            .forgotten-password-button{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+                .gradient-button{
+                    
+                width: 100px;
+                }
+            }
+            .success-messages {
+                color: #465057;
+                font-size: 16px;
+                font-family: MyriadPro;
+            }
+            .forgotten-password-bottom-content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 51px;
+                .forgotten-password-bottom-legend{
+                    color: #626060;
+                    font-family: MyriadPro;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+
+                }
+                .forgotten-password-bottom-button{
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+    .forgotten-password-container{
+        
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+
+    img{
+        min-width: 0;
+    flex-basis: auto;
+    width: 77px;
+    }
+        .forgotten-password-content{
+            display: flex;
+            justify-content: center;
+            .forgotten-password-form{
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                margin-top: 40px;
+                // background-color: lightcoral;
+                .forgotten-password-title{
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: MyriadPro;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                }
+                .forgotten-password-subtitle{
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 28px;
+                    color: $lightGrey;
+                }
+                .forgotten-password-input-group{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    position: relative;
+                    .forgotten-password-input-icon-container{
+                        width: 36px;
+                        position: absolute;
+                        left: -36px;
+                    }
+                    .forgotten-password-input-container{
+                        flex: 1;
+                    }
+                    .input-text-container input{
+                        width: 270px;
+                    }
+                }
+                .success-messages {
+                    color: #465057;
+                    font-size: 16px;
+                }
+                .forgotten-password-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 24px;
+                    .gradient-button{
+                        
+                    width: 100px;
+                    }
+                }
+                .forgotten-password-bottom-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 73px;
+                    .forgotten-password-bottom-legend{
+                        color: #FFFFFF;
+                        font-family: MyriadPro;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+    
+                    }
+                    .forgotten-password-bottom-button{
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*CREATED ACCOUNT*/
+
+.created-account-container{
+    height: 100%;
+    overflow: auto;
+    .created-account-content{
+        display: flex;
+        justify-content: center;
+        .created-account-form{
+            display: flex;
+            flex-direction: column;
+            width: 235px;
+            margin-top: 4vh;
+            // background-color: lightcoral;
+            .created-account-title{
+                text-align: center;
+                color: #022040;
+                font-size: 28px;
+                font-family: MyriadPro;
+                font-weight: 700;
+                margin-bottom: 39px;
+            }
+            .created-account-subtitle{
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 28px;
+                    color: $lightGrey;
+            }
+            .created-account-button{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 34px;
+                .gradient-button{
+                    
+                width: 115px;
+                }
+            }
+            .created-account-olvide{
+                color: #5393F2;
+                font-size: 14px;
+                text-align: center;
+                font-family: MyriadPro;
+                margin-top: 13px;
+            }
+            .created-account-bottom-content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 51px;
+                .created-account-bottom-legend{
+                    color: #626060;
+                    font-family: MyriadPro;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+
+                }
+                .created-account-bottom-button{
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+    .created-account-container{
+        
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+
+    img{
+        min-width: 0;
+    flex-basis: auto;
+    width: 77px;
+    }
+
+        .created-account-content{
+            display: flex;
+            justify-content: center;
+            .created-account-form{
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                margin-top: 40px;
+                // background-color: lightcoral;
+                .created-account-title{
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: MyriadPro;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                }
+                .created-account-subtitle{
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 28px;
+                    color: $lightGrey;
+                }
+                .created-account-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 24px;
+                    .gradient-button{
+                        
+                    width: 115px;
+                    }
+                }
+                .created-account-olvide{
+                    color: #5393F2;
+                    font-size: 14px;
+                    text-align: center;
+                    font-family: MyriadPro;
+                    margin-top: 13px;
+                }
+                .created-account-bottom-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 73px;
+                    .created-account-bottom-legend{
+                        color: #FFFFFF;
+                        font-family: MyriadPro;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+    
+                    }
+                    .created-account-bottom-button{
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*CONFIRM ACCOUNT*/
+
+.confirm-account-container{
+    height: 100%;
+    overflow: auto;
+    .confirm-account-content{
+        display: flex;
+        justify-content: center;
+        .confirm-account-form{
+            display: flex;
+            flex-direction: column;
+            width: 310px;
+            margin-top: 4vh;
+            // background-color: lightcoral;
+            .confirm-account-title{
+                text-align: center;
+                color: #022040;
+                font-size: 28px;
+                font-family: MyriadPro;
+                font-weight: 700;
+                margin-bottom: 39px;
+            }
+            .confirm-account-subtitle{
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 28px;
+                    color: $lightGrey;
+            }
+            .confirm-account-button{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 34px;
+                .gradient-button{
+                    
+                width: 115px;
+                }
+            }
+            .confirm-account-olvide{
+                color: #5393F2;
+                font-size: 14px;
+                text-align: center;
+                font-family: MyriadPro;
+                margin-top: 13px;
+            }
+            .confirm-account-bottom-content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 51px;
+                .confirm-account-bottom-legend{
+                    color: #626060;
+                    font-family: MyriadPro;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+
+                }
+                .confirm-account-bottom-button{
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+    .confirm-account-container{
+        
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+
+    img{
+        min-width: 0;
+    flex-basis: auto;
+    width: 77px;
+    }
+
+        .confirm-account-content{
+            display: flex;
+            justify-content: center;
+            .confirm-account-form{
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                margin-top: 40px;
+                // background-color: lightcoral;
+                .confirm-account-title{
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: MyriadPro;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                }
+                .confirm-account-subtitle{
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 28px;
+                    color: $lightGrey;
+                }
+                .confirm-account-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 24px;
+                    .gradient-button{
+                        
+                    width: 115px;
+                    }
+                }
+                .confirm-account-olvide{
+                    color: #5393F2;
+                    font-size: 14px;
+                    text-align: center;
+                    font-family: MyriadPro;
+                    margin-top: 13px;
+                }
+                .confirm-account-bottom-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 73px;
+                    .confirm-account-bottom-legend{
+                        color: #FFFFFF;
+                        font-family: MyriadPro;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+    
+                    }
+                    .confirm-account-bottom-button{
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Unsubscribe Request*/
+
+.unsubscribe-request-container{
+    height: auto;
+    overflow: auto;
+    background: #F9F9FC;
+    .unsubscribe-request-content{
+        display: flex;
+        justify-content: center;
+        .unsubscribe-request-form{
+            display: flex;
+            flex-direction: column;
+            width: 310px;
+            margin-top: 4vh;
+            // background-color: lightcoral;
+            .unsubscribe-request-title{
+                text-align: center;
+                color: #022040;
+                font-size: 28px;
+                font-family: MyriadPro;
+                font-weight: 700;
+                margin-bottom: 39px;
+            }
+            .unsubscribe-request-subtitle{
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 28px;
+                    color: $lightGrey;
+            }
+            .unsubscribe-request-button{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 1vh;
+                .gradient-button{
+                    
+                width: 115px;
+                }
+            }
+            .unsubscribe-request-olvide{
+                color: #5393F2;
+                font-size: 14px;
+                text-align: center;
+                font-family: MyriadPro;
+                margin-top: 13px;
+            }
+
+            .success-messages {
+                color: #465057;
+                font-size: 12px;
+                font-family: MyriadPro;
+                text-align: center;
+            }
+            .unsubscribe-request-bottom-content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 51px;
+                .unsubscribe-request-bottom-legend{
+                    color: #626060;
+                    font-family: MyriadPro;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+
+                }
+                .unsubscribe-request-bottom-button{
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+    .unsubscribe-request-container{
+        
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+
+    img{
+        min-width: 0;
+    flex-basis: auto;
+    width: 77px;
+    }
+
+        .unsubscribe-request-content{
+            display: flex;
+            justify-content: center;
+            .unsubscribe-request-form{
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                margin-top: 40px;
+                // background-color: lightcoral;
+                .unsubscribe-request-title{
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: MyriadPro;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                }
+                .unsubscribe-request-subtitle{
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 28px;
+                    color: $lightGrey;
+                }
+                .unsubscribe-request-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 1vh;
+                    .gradient-button{
+                        
+                    width: 115px;
+                    }
+                }
+                .unsubscribe-request-olvide{
+                    color: #5393F2;
+                    font-size: 14px;
+                    text-align: center;
+                    font-family: MyriadPro;
+                    margin-top: 13px;
+                }
+                .unsubscribe-request-bottom-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 73px;
+                    .unsubscribe-request-bottom-legend{
+                        color: #FFFFFF;
+                        font-family: MyriadPro;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+    
+                    }
+                    .unsubscribe-request-bottom-button{
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*CONFIRM UNSUBSCRIBE*/
+
+.confirm-unsubscribe-container{
+    height: 100%;
+    overflow: auto;
+    .confirm-unsubscribe-content{
+        display: flex;
+        justify-content: center;
+        .confirm-unsubscribe-form{
+            display: flex;
+            flex-direction: column;
+            width: 235px;
+            margin-top: 4vh;
+            // background-color: lightcoral;
+            .confirm-unsubscribe-title{
+                text-align: center;
+                color: #022040;
+                font-size: 28px;
+                font-family: MyriadPro;
+                font-weight: 700;
+                margin-bottom: 39px;
+            }
+            .confirm-unsubscribe-subtitle{
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 28px;
+                    color: $lightGrey;
+            }
+            .confirm-unsubscribe-button{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 34px;
+                .gradient-button{
+                    
+                width: 115px;
+                }
+            }
+            .confirm-unsubscribe-olvide{
+                color: #5393F2;
+                font-size: 14px;
+                text-align: center;
+                font-family: MyriadPro;
+                margin-top: 13px;
+            }
+            .confirm-unsubscribe-bottom-content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 51px;
+                .confirm-unsubscribe-bottom-legend{
+                    color: #626060;
+                    font-family: MyriadPro;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+
+                }
+                .confirm-unsubscribe-bottom-button{
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+    .confirm-unsubscribe-container{
+        
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+
+    img{
+        min-width: 0;
+    flex-basis: auto;
+    width: 77px;
+    }
+
+        .confirm-unsubscribe-content{
+            display: flex;
+            justify-content: center;
+            .confirm-unsubscribe-form{
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                margin-top: 40px;
+                // background-color: lightcoral;
+                .confirm-unsubscribe-title{
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: MyriadPro;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                }
+                .confirm-unsubscribe-subtitle{
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: MyriadPro;
+                    font-weight: 400;
+                    margin-bottom: 28px;
+                    color: $lightGrey;
+                }
+                .confirm-unsubscribe-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 24px;
+                    .gradient-button{
+                        
+                    width: 115px;
+                    }
+                }
+                .confirm-unsubscribe-olvide{
+                    color: #5393F2;
+                    font-size: 14px;
+                    text-align: center;
+                    font-family: MyriadPro;
+                    margin-top: 13px;
+                }
+                .confirm-unsubscribe-bottom-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 73px;
+                    .confirm-unsubscribe-bottom-legend{
+                        color: #FFFFFF;
+                        font-family: MyriadPro;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+    
+                    }
+                    .confirm-unsubscribe-bottom-button{
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Cambiar Contraseña*/
+
+.change-password-container{
+    height: auto;
+    overflow: auto;
+    background: #F9F9FC;
+    .change-password-content{
+        display: flex;
+        justify-content: center;
+        .change-password-form{
+                display: flex;
+                flex-direction: column;
+                width: 600px;
+                margin-top: 40px;
+                // background-color: lightcoral;
+                .change-password-title{
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: MyriadPro;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                }
+                .change-password-input-group{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    position: relative;
+                    .change-password-input-icon-container{
+                        width: 36px;
+                        position: absolute;
+                        left: -36px;
+                    }
+                    .change-password-input-container{
+                        flex: 1;
+                        .input-text-container .form-group{
+                            flex-direction: row;
+                            align-items: center;
+                            input{
+                                width: 210px;
+                            }
+                        }
+                        .input-error {
+                            margin-left: 228px;
+                        }
+                    }
+                }
+                .change-password-showpass{
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    margin-left: -36px;                    
+                }
+                .change-password-terms{
+                    padding: 0;
+                    width: 220px;
+                }
+                .change-password-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 24px;
+                    .gradient-button{
+                        
+                    width: 115px;
+                    }
+                }
+                .change-password-olvide{
+                    color: #5393F2;
+                    font-size: 14px;
+                    text-align: center;
+                    font-family: MyriadPro;
+                    margin-top: 13px;
+                }
+                .change-password-bottom-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 73px;
+                    .change-password-bottom-legend{
+                        color: #FFFFFF;
+                        font-family: MyriadPro;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+    
+                    }
+                    .change-password-bottom-button{
+                        width: 130px;
+                    }
+                }
+            }
+    }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile-width) {
+    .change-password-container{
+        
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+
+    img{
+        min-width: 0;
+    flex-basis: auto;
+    width: 77px;
+    }
+
+        .change-password-content{
+            display: flex;
+            justify-content: center;
+            .change-password-form{
+                display: flex;
+                flex-direction: column;
+                width: 190px;
+                margin-top: 40px;
+                // background-color: lightcoral;
+                .change-password-title{
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: MyriadPro;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                }
+                .change-password-input-group{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    position: relative;
+                    .change-password-input-icon-container{
+                        width: 36px;
+                        position: absolute;
+                        left: -36px;
+                    }
+                    .change-password-input-container{
+                        flex: 1;
+                        .input-text-container .form-group{
+                            flex-direction: column;
+                            align-items: center;
+                            input{
+                                width: 210px;
+                            }
+                        }
+
+                        .input-text-container label {
+                            width: 100%;
+                            font-size: 16px;
+                            font-family: MyriadPro;
+                            font-weight: 400;
+                            text-align: center;
+                            margin-right: 15px;
+                            margin-bottom: 10px;
+                        }
+
+                    }
+
+                }
+                .change-password-showpass{
+                    padding: 0;
+                }
+                .change-password-terms{
+                    padding: 0;
+                    width: 220px;
+                }
+
+                .change-password-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 24px;
+                    .gradient-button{
+                        
+                    width: 115px;
+                    }
+                }
+                .change-password-olvide{
+                    color: #5393F2;
+                    font-size: 14px;
+                    text-align: center;
+                    font-family: MyriadPro;
+                    margin-top: 13px;
+                }
+                .change-password-bottom-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 73px;
+                    .change-password-bottom-legend{
+                        color: #FFFFFF;
+                        font-family: MyriadPro;
+                        font-size: 15px;
+                        margin-bottom: 15px;
+    
+                    }
+                    .change-password-bottom-button{
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+}
