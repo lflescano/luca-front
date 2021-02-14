@@ -53,9 +53,11 @@ function App() {
                         }
                         { (load && user) && */}
                         <div>
-                            <Route path='/' component={CommunityListView} />
                             <Route path='/comunidad' component={CommunityListView} />
                             <Route path='/crear_pregunta' component={CommunityFormView} />
+                            <Route exact path="/">
+                                <Redirect to="/comunidad" />
+                            </Route>
                         </div>
                         {/* } */}
                 </React.Fragment>

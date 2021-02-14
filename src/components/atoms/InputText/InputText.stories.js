@@ -7,9 +7,13 @@ export default {
 }
 
 export const InputText = () => {
-    return <InputTextComponent label={'Mostrar caracteres'} type={'text'} placeholder={'Ingresá tu email'} />
+    return <InputTextComponent label={'Label'} type={'text'} placeholder={'Placer holder'} />
 }
 
 export const InputTextPassword = () => {
-    return <InputTextComponent label={'Mostrar caracteres'} type={'password'} placeholder={'Ingresá tu password'} />
+    return <InputTextComponent label={'Label'} type={'password'} placeholder={'Placer holder'} />
+}
+
+export const TextArea = () => {
+    return <InputTextComponent label={'TextArea'} as={'textarea'} rows="5" placeholder={'Placer holder'} />
 }

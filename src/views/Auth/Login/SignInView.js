@@ -10,8 +10,6 @@ import LoginHeader from 'components/atoms/LoginHeader';
 import InputText from 'components/atoms/InputText';
 import InputCheckbox from 'components/atoms/InputCheckbox';
 import ActionButton from 'components/atoms/ActionButton';
-import GradientButton from 'components/atoms/GradientButton';
-import Icon from 'components/atoms/Icon';
 
 
 import './styles.scss';
@@ -51,12 +49,10 @@ const SignInView = (props) => {
 
     const registrar = (e) => {
         e.preventDefault();
-        history.push('/registrar');
     }
 
     const pedirPassword = (e) => {
         e.preventDefault();
-        history.push('/olvide_password');
     }
 
     return (
@@ -68,26 +64,24 @@ const SignInView = (props) => {
                     <h1 className="signin-title">Iniciar Sesión</h1>
                     <div className="signin-input-group">
                         <div className="signin-input-icon-container">
-                            <Icon name="email" width={26} height={17} fill={isMobile ? '#ffffff' : '#1F3BA3'} />
                         </div>
                         <div className="signin-input-container">
-                            <InputText id="email" label="" placeholder="Ingresá tu email"
+                            <InputText id="email" label="" type="text" placeholder="Ingresá tu email"
                                 handleChange={(event) => { setEmail(event.target.value) }} error={errors.email}/>
                         </div>
                     </div>
                     <div className="signin-input-group">
                         <div className="signin-input-icon-container">
-                            <Icon name="lock"width={26} height={17} fill={isMobile ? '#ffffff' : '#1F3BA3'}  />
                         </div>
                         <div className="signin-input-container">
                             <InputText id="password" label="" placeholder="Ingresá tu contraseña"
                                 handleChange={(event) => {setClave(event.target.value)}}
                                 type={showPass ? 'text' : 'password'} error={errors.password}/>
                             <div className={showPass ? 'register-eye show' : 'register-eye hide'} onClick={() => { setshowPass(false) }}>
-                                <Icon name="eye" width={26} height={17} fill={isMobile ? '#ffffff' : '#1F3BA3'} />
+                                Mostrar
                             </div>
                             <div className={showPass ? 'register-eye-closed hide' : 'register-eye show'} onClick={() => { setshowPass(true) }}>
-                                <Icon name="eye-closed" width={26} height={17} fill={isMobile ? '#ffffff' : '#1F3BA3'} />
+                                Ocultar
                             </div>
                         </div>
                     </div>
@@ -95,7 +89,7 @@ const SignInView = (props) => {
                         <p className="error-messages">{message}</p>
                     }
                     <div  className="signin-button">
-                        <GradientButton legend={'INGRESAR'} disabled={submitted}
+                        <ActionButton legend={'INGRESAR'} disabled={submitted}
                             handleClick={handleSubmit} type={'submit'} />
                     </div>
                     <div className="signin-olvide">
