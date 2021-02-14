@@ -114,9 +114,10 @@
         align-content: center;
         display: flex;
         width: 100%;
+        padding: 0 16px;
         .item{
           margin: 0;
-          margin-left: 10px;
+          margin-left: 16px;
           border-radius: initial;
           padding-top: 24px;
           .item-title{

@@ -7,8 +7,6 @@ import { isMobile } from 'helpers/Mobile';
 
 import useRequest from 'hooks/useRequest';
 
-import SpinnerLuca from 'components/atoms/SpinnerLuca';
-
 import "./styles.scss";
 
 const MainLayout = ({ showHeader = true, children }) => {
@@ -26,7 +24,6 @@ const MainLayout = ({ showHeader = true, children }) => {
                 {children}
             </div>
         </div>
-        <SpinnerLuca></SpinnerLuca>
     </div>
 }
 

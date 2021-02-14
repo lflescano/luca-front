@@ -22,6 +22,7 @@ body{
             flex-direction: column;
             display: flex;
             background: #F1F2F8;
+            align-items: center;
 
             .right-layout-content {
                 padding: 45px 45px 0px 45px;
@@ -30,6 +31,7 @@ body{
                 display: flex;
                 flex-direction: column;
                 align-self: center;
+                min-width: 576px;
             }
         }
     }
@@ -43,6 +45,7 @@ body{
         .right-layout-content {
             padding: 16px;
             width: 100%;
+            min-width: 382px;
         }
     }
     .desktop-main-layout-container{

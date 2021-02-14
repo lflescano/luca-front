@@ -18,7 +18,7 @@ const CommunityForm = ({ handleSubmit, title, setTitle, description, setDescript
     return <MainLayout showHeader={!isMobile}>
         <div className="community-form-header">
             <h1>Haz una pregunta</h1>
-            {!isMobile && <ActionButton legend="CANCELAR" className="button-cancel" handleClick={() => history.push("/comunidad")}></ActionButton>}
+            {!isMobile && <ActionButton legend={message ? "VOLVER" : "CANCELAR"} className="button-cancel" handleClick={() => history.push("/comunidad")}></ActionButton>}
             {isMobile && <CancelButton url="/comunidad"></CancelButton>}
         </div>
         <div className="community-form-content">
